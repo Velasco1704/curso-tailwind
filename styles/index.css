@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .recommended-card {
+    @apply w-48 h-64 shadow-lg flex-none transition-all hover:-translate-y-2 hover:shadow-xl ease-in-out;
+
+    div:nth-child(1) {
+      @apply w-full h-3/5 rounded-t-lg bg-cover bg-center bg-no-repeat;
+    }
+
+    div:nth-child(2) {
+      @apply w-full h-2/5 px-3 py-2 rounded-b-lg dark:text-white;
+
+      p:nth-child(1) {
+        @apply font-bold text-xl;
+      }
+      p:nth-child(2) {
+        @apply text-base;
+      }
+    }
+  }
+
+  .trending-stays-card {
+    @apply text-white w-full h-96 rounded-2xl bg-cover bg-center bg-no-repeat px-4 py-16 flex flex-col items-start justify-start transition-all hover:-translate-y-2 hover:shadow-xl lg:items-end lg:text-end lg:py-8;
+
+    p:nth-child(1) {
+      @apply text-3xl font-bold mb-2.5;
+    }
+    p:nth-child(2) {
+      @apply text-lg font-medium max-w-[16rem];
+    }
+  }
+
+  .container-faqs {
+    @apply w-full flex flex-col justify-center;
+
+    h3 {
+      @apply mb-3.5 text-base font-semibold text-primary lg:mb-4 lg:text-lg dark:text-white;
+    }
+
+    p {
+      @apply mb-4 text-sm font-medium lg:mb-5 lg:text-base dark:text-white;
+    }
+  }
+}

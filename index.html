@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./assets/svg/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Vite App</title>
+  </head>
+  <body class="font-Montserrat dark:bg-gray-900">
+    <header class="relative">
+      <nav>
+        <div
+          class="hidden text-primary font-bold text-lg py-6 lg:flex justify-between items-center fixed w-full z-10 bg-white dark:bg-gray-800 dark:text-white"
+        >
+          <h1 class="ml-6">Travel Mockups</h1>
+          <div class="flex gap-12">
+            <a href="#home">Locations</a>
+            <a href="#trending-stays">Stays</a>
+            <a href="#faqs">FAQs</a>
+            <a href="#about-us">About Us</a>
+          </div>
+          <div class="flex gap-6 mr-16">
+            <a href="#search"
+              ><img src="./assets/svg/search.svg" alt="search" />
+            </a>
+            <button id="toggle">
+              <img src="./assets/svg/moon.svg" alt="moon" />
+            </button>
+            <a href="#"><img src="./assets/svg/user.svg" alt="user" /></a>
+          </div>
+        </div>
+        <div
+          class="w-full bg-white py-5 flex gap-10 items-center justify-center fixed z-10 bottom-0 left-0 lg:hidden dark:bg-gray-800 dark:text-white"
+          id="tab-bar"
+        >
+          <a href="#home"
+            ><img class="" src="./assets/svg/home.svg" alt="home"
+          /></a>
+          <a href="#search"
+            ><img src="./assets/svg/search.svg" alt="search" />
+          </a>
+          <a href="#trending-stays"
+            ><img src="./assets/svg/heart.svg" alt="heart"
+          /></a>
+          <a href="#"><img src="./assets/svg/user.svg" alt="user" /></a>
+          <button id="toggle-sm">
+            <img src="./assets/svg/moon.svg" alt="moon" />
+          </button>
+        </div>
+      </nav>
+    </header>
+    <section class="w-full">
+      <div class="mb-7" id="home">
+        <div class="w-full">
+          <div
+            class="bg-sanFranciscoDesktop bg-fixed bg-cover bg-center bg-no-repeat w-full h-[42rem] flex flex-col gap-y-72 py-16 items-center justify-center lg:gap-y-20 lg:items-start lg:px-20"
+          >
+            <h1 class="hidden lg:inline-block text-4xl font-bold">
+              Find More Locations <br />
+              like this
+            </h1>
+            <input
+              class="outline-none py-2 px-4 rounded-full shadow-sm transition-all duration-200 focus-within:shadow-md focus:ring-2 focus:w-11/12 ease-linear lg:hidden"
+              placeholder="San Francisco"
+              type="search"
+              name=""
+              id="search"
+            />
+            <button
+              class="w-48 bg-white text-primary font-semibold text-base py-4 rounded-full shadow-sm transition-all duration-500 ease-in-out hover:bg-primary hover:text-white hover:translate-y-1 hover:scale-110 dark:text-black"
+            >
+              Explore More
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="mb-7 px-4 flex flex-col" id="recommended">
+        <h2 class="mb-2 font-semibold text-2xl text-primary dark:text-white">
+          Our Recommendations
+        </h2>
+        <div
+          class="w-auto h-80 flex gap-5 items-center justify-center overflow-x-auto overscroll-x-contain snap-mandatory"
+        >
+          <div class="recommended-card">
+            <div class="bg-norway"></div>
+            <div class="bg-secondary text-white dark:bg-gray-700">
+              <p class="">Norway</p>
+              <p class="">Beautiful landscapes</p>
+            </div>
+          </div>
+          <div class="recommended-card">
+            <div class="bg-newYork"></div>
+            <div class="bg-white text-tertiary dark:bg-gray-800">
+              <p class="">New York</p>
+              <p class="">Concrete jungle</p>
+            </div>
+          </div>
+          <div class="recommended-card">
+            <div class="bg-seattle"></div>
+            <div class="bg-secondary text-white dark:bg-gray-700">
+              <p class="">Seattle</p>
+              <p class="">Unique Tower</p>
+            </div>
+          </div>
+          <div class="recommended-card">
+            <div class="bg-switzerland"></div>
+            <div class="bg-white text-tertiary dark:bg-gray-800">
+              <p class="">Switzerland</p>
+              <p class="">Beautiful mountains</p>
+            </div>
+          </div>
+          <div class="recommended-card">
+            <div class="bg-yosemite"></div>
+            <div class="bg-secondary text-white dark:bg-gray-700">
+              <p class="">Yosemite</p>
+              <p class="">A break from the world</p>
+            </div>
+          </div>
+          <div class="recommended-card">
+            <div class="bg-sydney"></div>
+            <div class="bg-white text-tertiary dark:bg-gray-800">
+              <p class="">Sydney</p>
+              <p class="">Beautiful beaches.</p>
+            </div>
+          </div>
+          <div class="recommended-card">
+            <div class="bg-iceland"></div>
+            <div class="bg-secondary text-white dark:bg-gray-700">
+              <p class="">Iceland</p>
+              <p class="">beautiful auroras</p>
+            </div>
+          </div>
+          <div class="recommended-card">
+            <div class="bg-edimburgo"></div>
+            <div class="bg-white text-tertiary dark:bg-gray-800">
+              <p class="">Edimburgo</p>
+              <p class="">Know their castles</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="px-4 mb-7" id="trending-stays">
+        <h2 class="mb-7 font-semibold text-2xl text-primary dark:text-white">
+          Trending Stays
+        </h2>
+        <div
+          class="flex flex-col gap-10 items-center justify-center lg:w-full lg:grid lg:grid-cols-2 lg:grid-rows-3"
+        >
+          <div class="trending-stays-card bg-chicago lg:col-span-2">
+            <p>Chicago</p>
+            <p>2 rooms, bathroom and kitchen.</p>
+          </div>
+          <div class="trending-stays-card bg-LA lg:row-span-2 lg:h-full">
+            <p>Los Angeles</p>
+            <p>4 rooms, 3 bathrooms, kitchen and private pool.</p>
+          </div>
+          <div class="trending-stays-card bg-miami">
+            <p>Miami</p>
+            <p>3 rooms, 2 bathrooms, kitchen and amazing sea view.</p>
+          </div>
+          <div class="trending-stays-card bg-bali">
+            <p>Bali</p>
+            <p>2 rooms, 2 bathrooms, kitchen and private pool.</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-full px-4" id="faqs">
+        <h2 class="font-semibold text-2xl text-primary mb-7 dark:text-white">
+          FAQs
+        </h2>
+        <div class="container-faqs max-w-6xl">
+          <h3>Payment Methods</h3>
+          <p>
+            We accept VISA, MasterCard, American Express, Paypal and Binance, We
+            accept VISA, MasterCard, American Express, Paypal and Binance. We
+            accept VISA, MasterCard, American Express, Paypal and Binance, We
+            accept VISA, MasterCard, American Express, Paypal and Binance.
+          </p>
+          <h3>Cancellation Policy</h3>
+          <p>
+            We accept VISA, MasterCard, American Express, Paypal and Binance, We
+            accept VISA, MasterCard, American Express, Paypal and Binance. We
+            accept VISA, MasterCard, American Express, Paypal and Binance, We
+            accept VISA, MasterCard, American Express, Paypal and Binance.
+          </p>
+          <h3>Long Stays</h3>
+          <p>
+            We accept VISA, MasterCard, American Express, Paypal and Binance, We
+            accept VISA, MasterCard, American Express, Paypal and Binance. We
+            accept VISA, MasterCard, American Express, Paypal and Binance, We
+            accept VISA, MasterCard, American Express, Paypal and Binance.
+          </p>
+          <h3>Cancellation Policy</h3>
+          <p>
+            We accept VISA, MasterCard, American Express, Paypal and Binance, We
+            accept VISA, MasterCard, American Express, Paypal and Binance. We
+            accept VISA, MasterCard, American Express, Paypal and Binance, We
+            accept VISA, MasterCard, American Express, Paypal and Binance.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer
+      class="mt-16 w-full h-auto px-4 py-3.5 text-grayFooter bg-grayFooter"
+      id="about-us"
+    >
+      <h3 class="text-xl font-semibold mb-4 lg:text-2xl">About Us</h3>
+      <p class="mb-2.5">Investors</p>
+      <p class="mb-2.5">Jobs</p>
+      <p class="mb-2.5">Privacy policy</p>
+      <p class="mb-2.5">Terms and Conditions</p>
+      <p class="mb-2.5">Platzi Travel, inc</p>
+      <p class="mb-3">Follow Us</p>
+      <div class="flex gap-3.5 mb-20">
+        <img src="./assets/svg/twitter.svg" alt="twitter" />
+        <img src="./assets/svg/instagram.svg" alt="instagram" />
+      </div>
+    </footer>
+    <script src="./src/main.js"></script>
+  </body>
+</html>
